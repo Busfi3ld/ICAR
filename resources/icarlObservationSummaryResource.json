@@ -1,0 +1,40 @@
+{
+    "description": "This resource (not an event) is delivered on request to summarise observations for an animal over a time period.",
+  
+    "allOf": [
+      {
+        "$ref": "../resources/icarResource.json"
+      },
+      {
+        "type": "object",
+  
+        "required": ["animal"],
+  
+        "properties": {
+          "animal": {
+            "$ref": "../types/icarAnimalIdentifierType.json",
+            "description": "Unique animal scheme and identifier combination."
+          },
+          "location": {
+            "$ref": "../types/icarLocationIdentifierType.json",
+            "description": "Location where the observations occurred."
+          },
+          "dateFrom": {
+            "$ref": "../types/icarDateType.json",
+            "description": "The start of the period for which statistics were calculated."
+          },
+          "dateTo": {
+            "$ref": "../types/icarDateType.json",
+            "description": "The end of the period for which statistics were calculated."
+          },
+          "statistics": {
+            "description": "The array of statistics for this animal.",
+            "type": "array",
+            "items": {
+              "$ref": "../types/icarObservationStatisticsType.json"
+            }
+          }                   
+        }
+      }
+    ]
+  }
