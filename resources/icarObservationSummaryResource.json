@@ -28,7 +28,7 @@
             "description": "The end of the period for which statistics were calculated."
           },
           "statistics": {
-            "description": "The array of statistics for this animal.",
+            "description": "The summary statistics for this animal. Likely to be summarised on demand based on query parameters.",
             "type": "array",
             "items": {
               "$ref": "../types/icarObservationStatisticsType.json"

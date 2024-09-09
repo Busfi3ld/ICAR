@@ -10,11 +10,11 @@
             "properties": {
                 "startDateTime": {
                     "$ref": "../types/icarDateTimeType.json",
-                    "description": "The start date and time of the aggregation period."
+                    "description": "The start date/time of the aggregation period for this particular statistic."
                 },
                 "duration": {
                     "$ref": "../enums/icarDurationType.json",
-                    "description": "The type of period duration (e.g. 1D, 24H, 1W)."
+                    "description": "The type of period duration (e.g. 1D, 24H, 1W). A call may return statistics with different durations."
                 }
             }
     
