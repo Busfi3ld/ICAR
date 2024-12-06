@@ -24,7 +24,11 @@
         "alternativeIdentifiers": {
           "anyOf": [
               {"type": "null"},
-              {"$ref": "../types/icarAnimalIdentifierType.json"}
+              {"type": "array",
+                  "items": {
+                      "$ref": "../types/icarAnimalIdentifierType.json"
+                  }
+              }  
           ],
           "description": "Alternative identifiers for the animal. Here, also temporary identifiers, e.g. transponders or animal numbers, can be listed."
         },
